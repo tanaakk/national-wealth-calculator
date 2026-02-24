@@ -1,0 +1,205 @@
+/* TANAAKK 国富実態算定計算機 */
+
+:root {
+  --bg: #0f1419;
+  --surface: #1a2332;
+  --border: #2d3a4d;
+  --text: #e6edf3;
+  --muted: #8b949e;
+  --accent: #58a6ff;
+  --highlight: #4caf50;
+  --negative: #f44336;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', 'Hiragino Sans', 'Yu Gothic UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.app {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+}
+
+.subtitle {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.subtitle small {
+  font-size: 0.8rem;
+}
+
+.preset-selector {
+  margin-bottom: 2rem;
+}
+
+.preset-selector label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+
+.preset-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.preset-buttons button {
+  padding: 0.6rem 1.2rem;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.preset-buttons button:hover {
+  background: #243044;
+}
+
+.preset-buttons button.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.as-of {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sector-breakdown {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.sector-breakdown h3 {
+  margin: 0 0 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.sector-breakdown table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.sector-breakdown td {
+  padding: 0.4rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.sector-breakdown td:last-child {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.sector-breakdown td.negative {
+  color: var(--negative);
+}
+
+.sector-breakdown tr.total td {
+  border-bottom: none;
+  font-weight: 600;
+  padding-top: 0.6rem;
+}
+
+.result-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.result-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.result-card .label {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.result-card .value {
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.result-card .value.highlight {
+  color: var(--highlight);
+}
+
+.methodology {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+
+.methodology h3 {
+  font-size: 1rem;
+  margin: 0 0 0.75rem;
+}
+
+.methodology ul {
+  margin: 0 0 1rem;
+  padding-left: 1.25rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.methodology li {
+  margin-bottom: 0.4rem;
+}
+
+.refs {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.refs a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.refs a:hover {
+  text-decoration: underline;
+}
